@@ -21,6 +21,7 @@ services:
       - nifi-conf:/opt/nifi/nifi-current/conf
       - nifi_flowfile:/opt/nifi/nifi-current/flowfile_repository
       - nifi_content:/opt/nifi/nifi-current/content_repository
+      - /Users/ignacioloyola/Library/CloudStorage/GoogleDrive-ignacio.loyola@biomedica.udec.cl/Mi unidad/Carrera/Diplomado/DataArchitecture/Casa_de_colores/backend/postgresql-42.7.3.jar:/opt/nifi/nifi-current/lib/postgresql-42.7.3.jar
     restart: unless-stopped
 
   postgres:

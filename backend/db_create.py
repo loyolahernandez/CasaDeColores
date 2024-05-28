@@ -1,11 +1,15 @@
 import psycopg2
+import configparser
+
+config = configparser.ConfigParser()
+config.read('db_config.ini')
 
 # Conexión a la base de datos
 conn = psycopg2.connect(
-    host="localhost",
-    database="postgres",
-    user="postgres",
-    password="mi-contraseña"
+    host=config['postgresql']['host'],
+    database=config['postgresql']['database'],
+    user=config['postgresql']['user'],
+    password=config['postgresql']['password']
 )
 
 cursor = conn.cursor()
