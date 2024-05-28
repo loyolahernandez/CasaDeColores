@@ -22,7 +22,22 @@ services:
       - nifi_flowfile:/opt/nifi/nifi-current/flowfile_repository
       - nifi_content:/opt/nifi/nifi-current/content_repository
     restart: unless-stopped
+
+  postgres:
+    image: postgres:latest
+    container_name: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: your_password
+      POSTGRES_DB: airbnb_ficticia
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
 volumes:
   nifi-conf:
   nifi_flowfile:
   nifi_content:
+  postgres_data:
