@@ -13,10 +13,6 @@ services:
       - NIFI_WEB_HTTP_HOST=0.0.0.0
     ports:
       - "8080:8080/tcp" # HTTP interface
-      - "8443:8443/tcp" # HTTPS interface
-      - "514:514/tcp" # Syslog
-      - "514:514/udp" # Syslog
-      - "2055:2055/udp" # NetFlow
     volumes:
       - nifi-conf:/opt/nifi/nifi-current/conf
       - nifi_flowfile:/opt/nifi/nifi-current/flowfile_repository
@@ -30,7 +26,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: your_password
-      POSTGRES_DB: airbnb_ficticia
+      POSTGRES_DB: example_db
     ports:
       - "5432:5432"
     volumes:
