@@ -1,0 +1,74 @@
+* {
+    box-sizing: border-box;
+  }
+
+  body {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    )
+    ,url(../resources/pool2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .login-container {
+    background-color: white;
+    padding: 40px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 300px;
+    height: 300px; /* Hacer el contenedor cuadrado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  h2 {
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: blueviolet;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .btn:hover {
+    background-color: rgb(101, 32, 165);
+  }  
